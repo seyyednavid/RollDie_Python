@@ -19,6 +19,8 @@ axes = sns.barplot(x=values, y=frequencies, palette='bright')  # create bars
 axes.set_title(title)  # set graph title
 axes.set(xlabel='Die Value', ylabel='Frequency')  # label the axes
 
+# scale y-axis by 10% to make room for text above bars
+axes.set_ylim(top=max(frequencies) * 1.10)
 
 plt.show()  # display graph 
 
@@ -56,8 +58,7 @@ plt.show()  # display graph
 
 
 
-# # scale y-axis by 10% to make room for text above bars
-# axes.set_ylim(top=max(frequencies) * 1.10)
+
 
 # # display frequency & percentage above each patch (bar)
 # for bar, frequency in zip(axes.patches, frequencies):
@@ -67,4 +68,3 @@ plt.show()  # display graph
 #     axes.text(text_x, text_y, text, 
 #               fontsize=11, ha='center', va='bottom')
 
-# plt.show()  # display graph 
